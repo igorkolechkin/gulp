@@ -1,0 +1,19 @@
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p:not(:last-of-type) {
+  margin-bottom: 20px;
+}
+
+button:disabled {
+  background-color: var(--color-grey);
+}

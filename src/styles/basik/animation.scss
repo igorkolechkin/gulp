@@ -1,0 +1,17 @@
+@keyframes runningLineDesktop {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 86px));
+  }
+}
+
+@keyframes runningLineMobile {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(calc(-100% - 26px));
+  }
+}

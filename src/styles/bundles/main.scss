@@ -1,0 +1,50 @@
+@import '../basik/index';
+@import '../basik/other';
+@import '../components/header/index';
+@import '../components/footer/index';
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  line-height: 1.55;
+  font-style: normal;
+  font-weight: 400;
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  @include mediaXsMax() {
+    font-size: 16px;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex-grow: 1;
+}
+
+.container {
+  max-width: 1720px;
+  padding: 0 40px;
+  width: 100%;
+  margin: 0 auto;
+
+  @include mediaSmMax() {
+    padding: 0 25px;
+  }
+}
