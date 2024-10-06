@@ -11,6 +11,7 @@ package-lock.json
 yarn.lock
 
 # Other files and directories to ignore
+.idea
 .DS_Store
 dist/
 coverage/

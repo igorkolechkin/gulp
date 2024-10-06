@@ -65,14 +65,14 @@ export function images() {
 }
 
 export const views = () => {
-  return gulp.src(paths.php.watch)
+  return gulp.src(paths.views.watch)
     .pipe(browser.stream())
 }
 
 
 export const serve = done => {
   browser.init({
-    proxy: 'https://pl.com/',
+    proxy: '',
     port: 8080
   })
 
@@ -82,7 +82,7 @@ export const serve = done => {
 export const watch = () => {
   gulp.watch(paths.styles.watch, styles)
   gulp.watch(paths.scripts.watch, scripts)
-  gulp.watch(paths.php.watch, views)
+  gulp.watch(paths.views.watch, views)
   gulp.watch(paths.images.src, images)
 }
 

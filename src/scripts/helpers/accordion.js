@@ -6,15 +6,22 @@ export default function accordion() {
     const accordionItems = accordion.querySelectorAll('.accordion__item')
     if (!accordionItems.length) return
 
-    accordion.addEventListener('click', accordionClick)
+    const isShowAll = accordion.dataset.showAll
+
+    accordion.addEventListener('click', e => accordionClick(e.target, isShowAll, accordionItems))
   })
 }
 
-function accordionClick({ target }) {
-  if (target.classList.contains('accordion__title')
-    || target.closest('.accordion__title')
-  ) {
-    const item = target.closest('.accordion__item')
-    item.classList.toggle('show')
+function accordionClick(target, isShowAll, accordionItems) {
+  if (target.classList.contains('accordion__title') || target.closest('.accordion__title')) {
+    const targetItem = target.closest('.accordion__item')
+
+    if (isShowAll !== undefined) {
+      targetItem.classList.toggle('show')
+    } else {
+      accordionItems.forEach(item => {
+        item === targetItem ? item.classList.add('show') : item.classList.remove('show')
+      })
+    }
   }
 }

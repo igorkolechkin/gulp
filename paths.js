@@ -13,7 +13,7 @@ export default {
     src: 'src/images/**/*.{jpg,jpeg,png,svg,gif}',
     dest: '../assets/images'
   },
-  php: {
+  views: {
     watch: '../**/*.php'
   },
 }
